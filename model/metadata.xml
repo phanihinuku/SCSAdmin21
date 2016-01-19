@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema Namespace="BRASKEM_PACKAGE.Employee"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="EMPLOYEE_MASTERType">
+                <Key>
+                    <PropertyRef Name="EMPLOYEE_ID" />
+                </Key>
+                <Property Name="EMPLOYEE_ID" Type="Edm.String" Nullable="false" MaxLength="15" />
+                <Property Name="EMPLOYEE_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="LOCATION" Type="Edm.String" MaxLength="7" />
+                <Property Name="YEAR" Type="Edm.String" MaxLength="4" />
+                <Property Name="UNIT" Type="Edm.String" MaxLength="36" />
+                <Property Name="AREA" Type="Edm.String" MaxLength="37" />
+                <Property Name="PROGRAM" Type="Edm.String" MaxLength="21" />
+                <Property Name="COUNT" Type="Edm.Int32" />
+            </EntityType>
+            <EntityType Name="EMPLOYEE_DETAILSType">
+                <Key>
+                    <PropertyRef Name="EMPLOYEE_ID" />
+                </Key>
+                <Property Name="EMPLOYEE_ID" Type="Edm.String" Nullable="false" MaxLength="15" />
+                <Property Name="EMPLOYEE_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="LOCATION" Type="Edm.String" MaxLength="7" />
+                <Property Name="YEAR" Type="Edm.String" MaxLength="4" />
+                <Property Name="MANAGER_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="UNIT" Type="Edm.String" MaxLength="36" />
+                <Property Name="AREA" Type="Edm.String" MaxLength="37" />
+                <Property Name="PROGRAM" Type="Edm.String" MaxLength="21" />
+                <Property Name="MANAGER_ID" Type="Edm.String" MaxLength="15" />
+                <Property Name="STATUS" Type="Edm.String" MaxLength="5" />
+            </EntityType>
+            <EntityType Name="EMPLOYEEM_DETAILSType">
+                <Key>
+                    <PropertyRef Name="EMPLOYEE_ID" />
+                </Key>
+                <Property Name="EMPLOYEE_ID" Type="Edm.String" Nullable="false" MaxLength="15" />
+                <Property Name="EMPLOYEE_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="LOCATION" Type="Edm.String" MaxLength="7" />
+                <Property Name="YEAR" Type="Edm.String" MaxLength="4" />
+                <Property Name="MANAGER_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="UNIT" Type="Edm.String" MaxLength="36" />
+                <Property Name="AREA" Type="Edm.String" MaxLength="37" />
+                <Property Name="PROGRAM" Type="Edm.String" MaxLength="21" />
+                <Property Name="MANAGER_ID" Type="Edm.String" MaxLength="15" />
+                <Property Name="STATUS" Type="Edm.String" MaxLength="5" />
+            </EntityType>
+            <EntityType Name="InsertUpdateProgramActionType">
+                <Key>
+                    <PropertyRef Name="EMPLOYEE_ID" />
+                </Key>
+                <Property Name="EMPLOYEE_ID" Type="Edm.String" Nullable="false" MaxLength="11" />
+                <Property Name="YEAR" Type="Edm.Int16" />
+                <Property Name="PA_CREATION_DATE" Type="Edm.String" MaxLength="15" />
+                <Property Name="PA_STATUS" Type="Edm.String" MaxLength="30" />
+                <Property Name="PA_LAST_CHANGE_DATE" Type="Edm.String" MaxLength="15" />
+                <Property Name="SCENARIO" Type="Edm.String" MaxLength="500" />
+                <Property Name="BUSINESS" Type="Edm.String" MaxLength="500" />
+                <Property Name="PRIORITY1" Type="Edm.String" MaxLength="250" />
+                <Property Name="PRIORITY2" Type="Edm.String" MaxLength="250" />
+                <Property Name="PHILOSOPHY1" Type="Edm.String" MaxLength="250" />
+                <Property Name="PHILOSOPHY2" Type="Edm.String" MaxLength="250" />
+                <Property Name="GOAL1_DESCRIPTION" Type="Edm.String" MaxLength="250" />
+                <Property Name="GOAL1_PERIOD" Type="Edm.String" MaxLength="15" />
+                <Property Name="GOAL1_WEIGHTAGE" Type="Edm.Byte" />
+                <Property Name="GOAL1_SELF_ASSESSMENT" Type="Edm.Byte" />
+                <Property Name="GOAL1_MANAGER_ASSESSMENT" Type="Edm.Byte" />
+                <Property Name="GOAL2_DESCRIPTION" Type="Edm.String" MaxLength="250" />
+                <Property Name="GOAL2_PERIOD" Type="Edm.String" MaxLength="15" />
+                <Property Name="GOAL2_WEIGHTAGE" Type="Edm.Byte" />
+                <Property Name="GOAL2_SELF_ASSESSMENT" Type="Edm.Byte" />
+                <Property Name="GOAL2_MANAGER_ASSESSMENT" Type="Edm.Byte" />
+                <Property Name="GOAL3_DESCRIPTION" Type="Edm.String" MaxLength="250" />
+                <Property Name="GOAL3_PERIOD" Type="Edm.String" MaxLength="15" />
+                <Property Name="GOAL3_WEIGHTAGE" Type="Edm.Byte" />
+                <Property Name="GOAL3_SELF_ASSESSMENT" Type="Edm.Byte" />
+                <Property Name="GOAL3_MANAGER_ASSESSMENT" Type="Edm.Byte" />
+                <Property Name="TOTAL1_80_PERCENT" Type="Edm.Byte" />
+                <Property Name="SUBJECTIVE_EVALUATION" Type="Edm.String" MaxLength="250" />
+                <Property Name="TOTAL2_20_PERCENT" Type="Edm.Byte" />
+                <Property Name="GRAND_TOTAL" Type="Edm.Byte" />
+                <Property Name="COMMUNICATION_SYSTEM" Type="Edm.String" MaxLength="250" />
+                <Property Name="BUDGET" Type="Edm.String" MaxLength="250" />
+                <Property Name="CRITICAL1_FACTORS" Type="Edm.String" MaxLength="250" />
+                <Property Name="SUPPORT1_NEEDED" Type="Edm.String" MaxLength="15" />
+                <Property Name="SUCCESSOR" Type="Edm.String" MaxLength="15" />
+                <Property Name="CRITICAL2_FACTORS" Type="Edm.String" MaxLength="250" />
+                <Property Name="SUPPORT2_NEEDED" Type="Edm.String" MaxLength="15" />
+                <Property Name="SELF_EVAL_CMNTS" Type="Edm.String" MaxLength="250" />
+                <Property Name="MNGR_EVAL_CMNT" Type="Edm.String" MaxLength="250" />
+                <Property Name="TOT_WEIGHT" Type="Edm.Byte" />
+                <Property Name="TOT_SELF" Type="Edm.Byte" />
+                <Property Name="TOT_MNGR" Type="Edm.Byte" />
+            </EntityType>
+            <EntityType Name="EMPLOYEE_REPORTType">
+                <Key>
+                    <PropertyRef Name="EMPLOYEE_ID" />
+                </Key>
+                <Property Name="EMPLOYEE_ID" Type="Edm.String" Nullable="false" MaxLength="15" />
+                <Property Name="EMPLOYEE_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="MANAGER_NAME" Type="Edm.String" MaxLength="17" />
+                <Property Name="LOCATION" Type="Edm.String" MaxLength="7" />
+                <Property Name="PROGRAM" Type="Edm.String" MaxLength="21" />
+                <Property Name="PA_CREATION_DATE" Type="Edm.String" MaxLength="15" />
+                <Property Name="PA_STATUS" Type="Edm.String" MaxLength="30" />
+                <Property Name="PA_LAST_CHANGE_DATE" Type="Edm.String" MaxLength="15" />
+                <Property Name="UNIT" Type="Edm.String" MaxLength="36" />
+                <Property Name="AREA" Type="Edm.String" MaxLength="37" />
+                <Property Name="TOTAL1_80_PERCENT" Type="Edm.Int64" />
+                <Property Name="TOTAL2_20_PERCENT" Type="Edm.Int64" />
+                <Property Name="GRAND_TOTAL" Type="Edm.Int64" />
+                <Property Name="YEAR" Type="Edm.Int64" />
+            </EntityType>
+            <EntityContainer Name="Employee" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="EMPLOYEE_MASTER" EntityType="BRASKEM_PACKAGE.Employee.EMPLOYEE_MASTERType" />
+                <EntitySet Name="EMPLOYEE_DETAILS" EntityType="BRASKEM_PACKAGE.Employee.EMPLOYEE_DETAILSType" />
+                <EntitySet Name="EMPLOYEEM_DETAILS" EntityType="BRASKEM_PACKAGE.Employee.EMPLOYEEM_DETAILSType" />
+                <EntitySet Name="InsertUpdateProgramAction" EntityType="BRASKEM_PACKAGE.Employee.InsertUpdateProgramActionType" />
+                <EntitySet Name="EMPLOYEE_REPORT" EntityType="BRASKEM_PACKAGE.Employee.EMPLOYEE_REPORTType" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

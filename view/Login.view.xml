@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.view.Login" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+			<Page title="Login">
+				<content>
+					
+					<Button text="Login" press="onLogin"/>
+				</content>
+			</Page>
+	
+</mvc:View>

@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.view.EmpLookup" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+			<Page title="Employee Lookup">
+				<content>
+					
+					<Button text="Emp Lookup" press="onEmpLookup"/>
+				</content>
+			</Page>
+	
+</mvc:View>

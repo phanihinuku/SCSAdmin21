@@ -1,0 +1,9 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+			<Page title="Employee Detail">
+				<content>
+					<Text text="Emp Detail" />
+				</content>
+			</Page>
+	
+</mvc:View>

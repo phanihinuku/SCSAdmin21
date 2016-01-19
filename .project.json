@@ -1,0 +1,44 @@
+{
+  "dataBinding": {
+    "/view/Master.view.xml": {
+      "entitySet": "EMPLOYEE_MASTER"
+    },
+    "/view/Details.view.xml": {
+      "entitySet": "EMPLOYEE_MASTER"
+    },
+    "/view/Main.view.xml": {
+      "entitySet": "UNBINDKEY"
+    }
+  },
+  "generation": [
+    {
+      "templateId": "ui5template.fioriFullScreen",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Fri, 07 Aug 2015 13:24:06 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Tue, 19 Jan 2016 08:17:22 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/destinations/braskemxsodata_Mng/",
+    "metadataFilePath": "model/metadata.xml",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "hcpdeploy": {
+    "account": "sdctechmo",
+    "name": "testsapui5",
+    "lastVersionWeTriedToDeploy": "1.0.0"
+  }
+}

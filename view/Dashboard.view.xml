@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.view.Dashboard" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="Dashboard">
+				<content><Button text="Contacts" press="toContacts"></Button></content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,127 @@
+<mvc:View controllerName="com.view.Launchpad" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:s="sap.suite.ui.commons" xmlns:u="sap.ui.unified" xmlns="sap.m">
+	<u:Shell>
+		<u:content>
+			<FlexBox justifyContent="SpaceAround" width="100%">
+			<Panel headerText="My Home" id="" backgroundDesign="Transparent">
+				<s:GenericTile class="tiles" frameType="OneByOne" header="myteam" press="onTileSelect" size="M">
+					<s:tileContent>
+						<s:TileContent footer="Members" size="M">
+							<s:content>
+								<s:NumericContent icon="sap-icon://org-chart" size="M" value="3"/>
+							</s:content>
+						</s:TileContent>
+					</s:tileContent>
+				</s:GenericTile>
+				<s:GenericTile class="tiles" frameType="OneByOne" header="myinbox" press="onTileSelect" size="M">
+					<s:tileContent>
+						<s:TileContent footer="Members" size="M">
+							<s:content>
+								<s:NumericContent icon="sap-icon://org-chart" size="M" value="3"/>
+							</s:content>
+						</s:TileContent>
+					</s:tileContent>
+				</s:GenericTile>
+				<s:GenericTile class="tiles" frameType="OneByOne" header="myteam" press="onTileSelect" size="M">
+					<s:tileContent>
+						<s:TileContent footer="Members" size="M">
+							<s:content>
+								<s:NumericContent icon="sap-icon://org-chart" size="M" value="3"/>
+							</s:content>
+						</s:TileContent>
+					</s:tileContent>
+				</s:GenericTile>
+				<s:GenericTile class="tiles" frameType="OneByOne" header="myteam" press="onTileSelect" size="M">
+					<s:tileContent>
+						<s:TileContent footer="Members" size="M">
+							<s:content>
+								<s:NumericContent icon="sap-icon://org-chart" size="M" value="3"/>
+							</s:content>
+						</s:TileContent>
+					</s:tileContent>
+				</s:GenericTile>
+				<!--<CustomTile class="sapMTile tiles customtile" frameType="TwoByOne" header="myteam" press="onTileSelect" size="M" >
+					<content>
+						<Table>
+							<columns>
+								<Column>
+									<Label text="Projects"/>
+								</Column>
+								<Column>
+									<Label text="Status"/>
+								</Column>
+								<Column>
+									<Label text="Risk/Issues"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="FY16 Budget Planning"/>
+										<ObjectStatus state="Warning" text="Warning"/>
+										<Text text="None"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Text text="FX Process Improvement"/>
+										<ObjectStatus state="Error" text="Success"/>
+										<Text text="Delay in selecting partner"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						</content>
+				</CustomTile>-->
+				<s:GenericTile class="tiles" frameType="TwoByOne" header="myteam" press="onTileSelect" size="M">
+					<s:tileContent>
+						<s:TileContent footer="x" size="M">
+							<s:content>
+								<Table>
+							<columns>
+								<Column>
+									<Label text="Projects"/>
+								</Column>
+								<Column>
+									<Label text="Status"/>
+								</Column>
+								<Column>
+									<Label text="Risk/Issues"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="FY16 Budget Planning"/>
+										<ObjectStatus state="Warning" text="Warning"/>
+										<Text text="None"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Text text="FX Process Improvement"/>
+										<ObjectStatus state="Error" text="Success"/>
+										<Text text="Delay in selecting partner"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+							</s:content>
+						</s:TileContent>
+					</s:tileContent>
+				</s:GenericTile>
+				<s:GenericTile class="tiles" frameType="TwoByOne" header="myteam" press="onTileSelect" size="M">
+					<s:tileContent>
+						<s:TileContent footer="Members" size="M">
+							<s:content>
+								<s:NumericContent icon="sap-icon://org-chart" size="M" value="3"/>
+							</s:content>
+						</s:TileContent>
+					</s:tileContent>
+				</s:GenericTile>
+				
+			</Panel>
+			</FlexBox>
+		</u:content>
+	</u:Shell>
+</mvc:View>
