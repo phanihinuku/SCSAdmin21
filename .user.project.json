@@ -1,6 +1,22 @@
 {
   "run": [
     {
+      "filePath": "/SCSAdmin21/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 9374661,
+        "displayName": "New Web Application 2"
+      }
+    },
+    {
       "filePath": "/SCSAdmin2/index.html",
       "previewMode": 1,
       "dataMode": 1,
@@ -14,7 +30,8 @@
       "_metadata": {
         "runnerId": "webapprunner",
         "id": 891413,
-        "displayName": "New Web Application 3"
+        "displayName": "New Web Application 3",
+        "hasIssues": true
       }
     },
     {

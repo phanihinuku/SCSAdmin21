@@ -42,11 +42,12 @@
     };
 </script>
 
-<script src="test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
-<!--  Bootstrap the UI5 core library -->
+<!--<script src="test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script> 
+  Bootstrap the UI5 core library -->
 
 <script id="sap-ui-bootstrap"
-    src="resources/sap-ui-core.js" data-sap-ui-libs="sap.m"
+    src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
+    data-sap-ui-libs="sap.m"
     data-sap-ui-theme="sap_bluecrystal"
     data-sap-ui-xx-bindingSyntax="complex" data-sap-ui-compatVersion="1.16"
     data-sap-ui-resourceroots='{"com": "./"}'>
@@ -70,13 +71,27 @@
 </script>
 <!-- Create the unified shell default renderer control and add it to the page -->
 <script type="text/javascript">
-    sap.ui.getCore().attachInitEvent(function() {
-        sap.ushell.Container.createRenderer().placeAt("content");
+    // sap.ui.getCore().attachInitEvent(function() {
+    //     sap.ushell.Container.createRenderer().placeAt("content");
+
+    sap.ui.getCore().attachInit(function() {
+                new sap.m.Shell({
+                    app: new sap.ui.core.ComponentContainer({
+                        height : "100%",
+                        name : "com"
+                    })
+                }).placeAt("content");
+
     });
+    jQuery.sap.require("sap.m.MessageStrip");
+
+    var oBar = new sap.m.MessageStrip("mStrip",{text:"Demo Strip",type:"Error"});
+    oBar.placeAt("statusBar");
 </script>
 </head>
 
 <!-- UI Content -->
 <body class="sapUiBody" id="content">
+<div id="statusBar">hi</div>
 </body>
 </html>

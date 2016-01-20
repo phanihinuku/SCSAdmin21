@@ -1,0 +1,100 @@
+<mvc:View controllerName="com.view.SMSBox" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>SMSBox}">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<Button icon="sap-icon://home" press="back"></Button>
+						</contentLeft>
+						<contentMiddle>
+							<Text text="{i18n>SCS}"></Text>
+						</contentMiddle>
+						<contentRight >
+							<Button icon="sap-icon://log" press="logout"></Button>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<subHeader>
+					<Bar>
+						<contentMiddle>
+							<Text text="{i18n>SMSBox}"></Text>
+						</contentMiddle>
+						<contentRight>
+							<Button icon="sap-icon://add" press="gotoCompose" text="{i18n>Compose}"></Button>
+						</contentRight>
+					</Bar>
+				</subHeader>
+				<content>
+					<IconTabBar class="sapUiResponsiveContentPadding" id="idIconTabBar" select="handleIconTabBarSelect">
+						<items>
+							<IconTabFilter count="{path:'IM>/scheduled',formatter:'com.utils.formatter.countModel' }" icon="sap-icon://outbox" key="NEW"
+								text="{i18n>Scheduled}"/>
+							<IconTabFilter count="{path:'IM>/completed',formatter:'com.utils.formatter.countModel' }" icon="sap-icon://begin" iconColor="Positive"
+								key="CMP" text="{i18n>Completed}"/>
+							<IconTabFilter count="{path:'IM>/cancelled',formatter:'com.utils.formatter.countModel' }" icon="sap-icon://sys-cancel"
+								iconColor="Negative" key="CNC" text="{i18n>Cancelled}"/>
+							<IconTabFilter count="{path:'IM>/failed',formatter:'com.utils.formatter.countModel' }" icon="sap-icon://status-error"
+								iconColor="Critical" key="FLD" text="{i18n>Failed}"/>
+						</items>
+						<content>
+							<Table id="inboxTable" inset="false" items="{ path: 'IM>/scheduled' }">
+								<headerToolbar>
+									<Toolbar>
+										<Title level="H2" text=""/>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column width="12em">
+										<Text text="{i18n>Recepients}"/>
+									</Column>
+									<Column width="12em">
+										<Text text="{i18n>Message}"/>
+									</Column>
+									<Column width="12em">
+										<Text text="{i18n>Date}"/>
+									</Column>
+									<!--<Column width="12em">-->
+									<!--	<Text text="Status"/>-->
+									<!--</Column>-->
+								</columns>
+								<items>
+									<ColumnListItem id="cli">
+										<cells>
+											<ObjectIdentifier text="{IM>recipient_phone}" title="{IM>recipient_name}"/>
+											<Text text="{IM>message}"/>
+											<Text text="{IM>date}"/>
+											<!-- <Text text="{
+													path: 'IM>date',
+													type: 'sap.ui.model.type.DateTime',
+													formatOptions: {
+														pattern: 'yyyyMMdd HHmmss'
+													}
+												}" ></Text> -->
+											<!--<Text-->
+											<!--	text="{IM>status}" />-->
+											<!--<core:Icon src="{path:'IM>status',formatter:'com.utils.formatter.icongen'}">-->
+											<!--	<core:layoutData>-->
+											<!--		<FlexItemData growFactor="1"/>-->
+											<!--	</core:layoutData>-->
+											<!--</core:Icon>-->
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</IconTabBar>
+				</content>
+				 <footer>
+			<Bar>
+				<contentMiddle>
+					<Label text="{i18n>SCSFOOTER}"></Label>
+				</contentMiddle>
+			
+			</Bar>
+		</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -41,7 +41,8 @@ sap.ui.core.UIComponent.extend("com.Component", {
 					view: "Launchpad",
 					pattern: "launchpad"
 				},
-				{
+				{	
+					"viewType": "JS",
 					name: "idDashboard",
 					view: "Dashboard",
 					pattern: "dashboard"
@@ -51,6 +52,43 @@ sap.ui.core.UIComponent.extend("com.Component", {
 					view: "Upload",
 					pattern: "uploadSMS"
 				},
+				{
+					name: "idAdduser",
+					view: "Adduser",
+					pattern: "Adduser"
+				},
+				{
+					name: "idComposeSMS",
+					view: "ComposeSMS",
+					pattern: "ComposeSMS"
+				},
+				{
+					name: "idImportCustomers",
+					view: "ImportCustomers",
+					pattern: "ImportCustomers"
+				},
+				{
+					name: "idCustomerSegmentation",
+					view: "CustomerSegmentation",
+					pattern: "CustomerSegmentation"
+				},
+				{
+					name: "idSMSBox",
+					view: "SMSBox",
+					pattern: "SMSBox"
+				},
+				{
+					name: "idImportSMS",
+					view: "ImportSMS",
+					pattern: "ImportSMS"
+				},
+				{
+					name: "idImportAppointmentSMS",
+					view: "ImportAppointmentSMS",
+					pattern: "ImportAppointmentSMS"
+				},
+				
+				
 				{
 					name: "splitapp",
 					view: "inbox.App",
